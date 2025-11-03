@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int a=2,*ptr;
+    ptr =&a;
+    *ptr=a;
+    printf("before updating the pointer value is %d\n",*ptr);
+    *ptr =5;
+    printf("updated pointer value is %d",*ptr);
+}
