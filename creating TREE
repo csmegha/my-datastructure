@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct Node {
+    int data;
+    struct Node *left;
+    struct Node *right;
+};
+int main(){
+    struct Node *root=(struct Node*)malloc(sizeof(struct Node));
+    struct Node *leftchild=(struct Node*)malloc(sizeof(struct Node));
+    struct Node *rightchild=(struct Node*)malloc(sizeof(struct Node));
+    root->data=1;
+    leftchild->data=2;
+    rightchild->data=3;
+    root->left=leftchild;
+    root->right=rightchild;
+    
+    leftchild->left=leftchild->right=NULL;
+    rightchild->left=rightchild->right=NULL;
+    printf("root = %d \n",root->data);
+    printf("leftchild = %d \n",root->left->data);
+    printf("rightchild = %d \n",root->right->data);
+}
